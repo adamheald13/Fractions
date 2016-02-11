@@ -3,8 +3,7 @@
 #include "Fraction.h"
 using namespace std;
 
-Fraction::Fraction(int numerator, int denominator)
-{
+Fraction::Fraction(int numerator, int denominator) {
   this->numerator = numerator;
 
   if(denominator == 0) {
@@ -20,8 +19,7 @@ Fraction::Fraction(int numerator, int denominator)
     this->wholeNumber = 0;                  //indicates this is NOT a mixed number
 }
 
-Fraction Fraction::add(Fraction f1, Fraction f2)
-{
+Fraction Fraction::add(Fraction f1, Fraction f2) {
   // (a/b) + (c/d)
   // = (a * d + c * b) / (d * b)
   Fraction sum = Fraction(f1.getNumerator() * f2.getDenominator() +
@@ -31,23 +29,19 @@ Fraction Fraction::add(Fraction f1, Fraction f2)
   return sum;
 }
 
-Fraction Fraction::xAdd(Fraction f1, Fraction f2)
-{
+Fraction Fraction::xAdd(Fraction f1, Fraction f2) {
   //TODO
 }
 
-Fraction Fraction::reduce(Fraction fraction)
-{
+Fraction Fraction::reduce(Fraction fraction) {
   //TODO
 }
 
-int Fraction::getNumerator()
-{
+int Fraction::getNumerator() {
   return this->numerator;
 }
 
-int Fraction::getDenominator()
-{
+int Fraction::getDenominator() {
   return this->denominator;
 }
 
@@ -60,8 +54,7 @@ void Fraction::convertToMixedNumber() {
   }
 }
 
-void Fraction::printFraction()
-{
+void Fraction::printFraction() {
   if(this->wholeNumber != 0) {
     cout << this->wholeNumber << " ";
   }

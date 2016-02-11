@@ -2,8 +2,7 @@
 #include "Fraction.h"
 using namespace std;
 
-int main()
-{
+int main() {
   Fraction f1(2, 3);
   Fraction f2(1, 2);
   Fraction f4(11, 3);
