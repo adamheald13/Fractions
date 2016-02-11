@@ -18,9 +18,20 @@ Fraction::Fraction(int numerator, int denominator)
     this->denominator = denominator;        //given denominator is positive
 }
 
-Fraction* Fraction::add(Fraction* f1, Fraction* f2)
+Fraction Fraction::add(Fraction f1, Fraction f2)
 {
-  return f1;
+  // (a/b) + (c/d)
+  // = (a * d + c * b) / (d * b)
+  Fraction sum = Fraction(f1.getNumerator() * f2.getDenominator() +
+                     f2.getNumerator() * f1.getDenominator(),
+                     f1.getDenominator() * f2.getDenominator());
+
+  return sum;
+}
+
+Fraction Fraction::xAdd(Fraction f1, Fraction f2)
+{
+
 }
 
 Fraction Fraction::reduce(Fraction fraction)
