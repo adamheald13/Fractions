@@ -6,11 +6,10 @@ int main()
 {
   Fraction f1(2, 3);
   Fraction f2(1, 2);
+  Fraction f4(11, 3);
 
   Fraction f3 = Fraction::add(f1, f2);
+  f4.convertToMixedNumber();
 
-  f3.printFraction();
-  // Fraction* f3 = Fraction::add(f1, f2);
-
-  // f3->printFraction();
+  f4.printFraction();
 }
