@@ -30,7 +30,9 @@ Fraction Fraction::add(Fraction f1, Fraction f2) {
 }
 
 Fraction Fraction::xAdd(Fraction f1, Fraction f2) {
-  //TODO
+  Fraction mixedSum = Fraction::add(f1, f2);
+  mixedSum.convertToMixedNumber();
+  return mixedSum;
 }
 
 Fraction Fraction::reduce(Fraction fraction) {
@@ -46,7 +48,7 @@ int Fraction::getDenominator() {
 }
 
 void Fraction::convertToMixedNumber() {
-  if(this->numerator <= this->denominator) {
+  if(this->numerator <= this->denominator && this->numerator * -1 <= this->denominator) {
     //the fraction is proper, cannot be changed to a mixed number
   } else {
     this->wholeNumber = this->numerator / this->denominator;
