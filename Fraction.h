@@ -9,6 +9,7 @@ public:
   int getNumerator();
   int getDenominator();
   void convertToMixedNumber();
+  void reduce();
   void printFraction();
 
   static Fraction add(Fraction firstAddend, Fraction secondAddend);
@@ -20,8 +21,6 @@ private:
   int wholeNumber;  //used for mixed numbers
                     //If this variable is filled it indicates this
                     //object represents a mixed number.
-
-  static Fraction reduce(Fraction fraction);
 };
 
 #endif
